@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(73, 157, 253);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <!-- DOM ===> Document Object Model-->
+    <h1>Iniciando  estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div name="msg">Clique em mim</div>
+    <br>
+    <div id="cool">Utilizando querySelector()</div>
+
+    <script>
+         var corpo = window.document.body
+         var p1 = window.document.getElementsByTagName('p')[0] // seleciona ou elemendo de acordo com o nome de sua tag, no caso a tag <p> em si. e entre o [0] indica somente o primeiro <p> qua aparecer no código (é um tipo de vetor) 
+        var p2 = window.document.getElementsByTagName('p')[1]
+        var d = document.getElementsByName('msg')[0] // se quiser diminuir mais, pode tirar o 'window'
+
+        corpo.style.background = 'purple' // substitui a cor que está no CSS
+        window.document.write('Script: ' + p2.innerHTML) // innerText insere texto sem negrito (<strong>), innerHTML insere com nogrito (<strong>)
+
+        
+        p1.style.color = 'gold'
+
+        /*
+        d.style.background = 'gold'
+        d.style.color = 'purple'
+        // d.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText = 'Olá, mundo.'
+        */
+
+        d.innerText = 'Usando getElementByName()'
+        d.style.color = 'gold'
+
+        var qs = window.document.querySelector('div#cool')
+        qs.style.background = 'pink'
+        qs.style.color = 'purple'
+        
+        /*
+        alert('Script: ' + p2.innerText) // innertHTML mostra as tags child (tags filhas)
+        */
+    </script>
+</body>
+</html>

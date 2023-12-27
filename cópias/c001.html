@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Lateral</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #menu {
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            transition: 0.5s;
+        }
+        #menu.open {
+            left: 0;
+        }
+        #menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        #menu ul li {
+            padding: 10px;
+            text-align: center;
+        }
+        #menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        #content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li><a href="#">Opção 1</a></li>
+            <li><a href="#">Opção 2</a></li>
+            <li><a href="https://www.youtube.com/channel/UCuVMJLQbAbx1iIcE0VYGcsg">Opção 3</a></li>
+            <li><a href="#">Opção 4</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <button id="menuButton">Abrir Menu</button>
+    </div>
+    <script>
+        document.getElementById("menuButton").addEventListener("click", function () {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática 01</title>
+</head>
+<style>
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #222222;
+        color:white;
+        font: normal 22pt arial;
+        text-align: center;
+    }
+    h1 {
+        color: yellow;
+    }
+</style>
+<body>
+
+<script>
+    var nome = window.prompt('Qual o seu nome?')
+    // var sobrenome = window.prompt('Qual o seu sobrenome?')
+    var ano_niver = Number(window.prompt('Em que ano você nasceu?'))
+    var ano_atual = Number(window.prompt('Em qual ano estamos agora?'))
+
+    var idade = ano_atual - ano_niver
+
+    document.write(`<h1>Olá ${nome}</h1> Você nasceu em ${ano_niver} e tem atualmente tem ${idade} anos de idade <br> (caso já tenha feito aniversário em ${ano_atual})`)
+</script>
+</body>
+</html>

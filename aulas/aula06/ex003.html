@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+</head>
+<style>
+    body {
+        background-color: #222222;
+        color:white;
+        font: normal 20pt Arial; /* comentário em CSS */
+    }
+    h1 {
+        color: yellow;
+    }
+</style>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Feito!</p> <!-- Comentário em HTML -->
+    <script>
+        var n1 = Number(window.prompt('Digite o primeiro número')) // prompt recebe string
+        var n2 = Number(window.prompt('Agora o segundo número')) // prompt recebe string
+        var soma = n1 + n2
+        // Number.parseInt(n) converte p/ números inteiros
+        // Number.parseFloat(n) converte p/ números reais também
+        // Number(n) o JS se vira na conversão
+
+        // String(n) converte de Número p/ String
+        // n.toString() o mesmo de cima
+        
+        window.alert(`${n1} mais ${n2} é igual a ${soma}`)
+
+        // (numero + numero) para adição
+        // (string + string) para concatenação
+</script>
+</body>
+</html>
