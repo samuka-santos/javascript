@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 6</title>
+    <style>
+        body {
+            font: normal 15pt arial;
+        }
+        input {
+            padding: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor de Temperaturas</h1>
+    <input type="button" value="Converter" onclick="converter()">
+    <div id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+
+    <script>
+        function converter() {
+            var celsius = Number(window.prompt('Digite um temperatura em °C(Celsius)')) // Alt + 0176 = °
+            var res = window.document.getElementById('res')
+
+            var fah = Number.parseFloat((celsius * 9 / 5) + 32).toFixed(2)
+            var kel = Number.parseFloat(celsius + 273.15).toFixed(2)
+
+            res.innerHTML = `<h2>A temperatura de ${celsius}°C corresponde a...</h2><p>${kel}°K (Kelvin)</p><p>${fah}°F (Fahrenheit)</P>`
+        }
+    </script>
+</body>
+</html>

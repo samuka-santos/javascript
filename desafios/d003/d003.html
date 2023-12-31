@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 3</title>
+    <style>
+        body {
+            font: normal 15pt arial;
+            text-align: center;
+        }
+        input {
+            padding: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Antes e depois</h1>
+    <input type="button" value="Antecessor e Sucessor" onclick="desafio()">
+
+    <script>
+        function desafio() {
+            var num = Number(window.prompt('Digite um número inteiro qualquer'))
+            var nAnt = num - 1
+            var nDps = num + 1
+
+            window.alert(`Antes de ${num}, temos o número ${nAnt}.\nDepois de ${num}, temos o número ${nDps}.`)
+            /* 
+                <br> pula linha no HTML
+                \n pula linha no JS
+            */
+        }
+    </script>
+</body>
+</html>

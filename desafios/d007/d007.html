@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 7</title>
+    <style>
+        body {
+            font: normal 15pt arial;
+        }
+        input {
+            padding: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ → US$</h1> 
+    <!-- Alt + 26=→ 27=← 25=↓ 24=↑-->
+    <input type="button" value="Converter" onclick="converter()">
+    <div id="res">
+        <p>Clique no botão acima para iniciar</p>
+    </div>
+    
+    <script>
+        var cotação_dolar = window.prompt('Antes de mais nada. Quanto está a cotação do dólar agora?')
+
+        function converter() {
+            var reais = Number(window.prompt('Quantos R$ você tem na carteira?'))
+            var dolar = reais / cotação_dolar
+
+            reais = reais.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})
+            dolar = dolar.toLocaleString('pt-BR', {style:'currency', currency: 'USD'})
+
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<h2>Com os ${reais} reais que você tem na carteira, conseguirá comprar...</h2><p>${dolar} dólares!`
+        }
+    </script>
+</body>
+</html>
