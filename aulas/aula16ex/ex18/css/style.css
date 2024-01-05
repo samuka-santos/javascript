@@ -17,6 +17,9 @@ section {
     margin: auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.336);
 }
+select {
+    width: 150px;
+}
 
 
 footer {
